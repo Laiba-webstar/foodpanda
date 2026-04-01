@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap 5-Item Carousel</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .card-box {
+            background: #f8f9fa;
+            border: 1px solid #ddd;
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+        .card-box:hover {
+            transform: translateY(-5px);
+            background: #e9ecef;
+        }
+        .carousel-control-prev, .carousel-control-next {
+            width: 5%;
+            filter: invert(1); /* Makes default white icons dark */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container my-5">
+    <h2 class="text-center mb-4">Responsive 5-Item Slider</h2>
+
+    <div id="multiItemCarousel" class="carousel slide" data-bs-ride="false">
+        <div class="carousel-inner">
+            
+            <div class="carousel-item active">
+                <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 g-3">
+                    <div class="col"><div class="card-box">Box 1</div></div>
+                    <div class="col"><div class="card-box">Box 2</div></div>
+                    <div class="col"><div class="card-box">Box 3</div></div>
+                    <div class="col"><div class="card-box">Box 4</div></div>
+                    <div class="col"><div class="card-box">Box 5</div></div>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 g-3">
+                    <div class="col"><div class="card-box">Box 6</div></div>
+                    <div class="col"><div class="card-box">Box 7</div></div>
+                    <div class="col"><div class="card-box">Box 8</div></div>
+                    <div class="col"><div class="card-box">Box 9</div></div>
+                    <div class="col"><div class="card-box">Box 10</div></div>
+                </div>
+            </div>
+
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#multiItemCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#multiItemCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
